@@ -4,6 +4,7 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-plugins/registry/etcdv3"
 	"github.com/odom11/playground_micro/api"
+	"github.com/odom11/playground_micro/toc"
 )
 
 func main() {
