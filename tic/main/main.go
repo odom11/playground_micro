@@ -18,9 +18,6 @@ func main() {
 	toc := micro.NewService()
 	toc.Init()
 
-	tocservice := api.NewTocService("toc", toc.Client())
-	arg := tic.New(tocservice)
-
 	service.Init()
 	api.RegisterTicHandler(service.Server(), tic.New(api.NewTocService("toc", toc.Client())))
 }

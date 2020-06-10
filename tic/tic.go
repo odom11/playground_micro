@@ -18,7 +18,8 @@ func New(toc api.TocService) *Tic {
 func (t *Tic) Shout(ctx context.Context, req *api.Bounce, rsp *api.Bounce) error  {
 	_, err := t.toc.Shout(context.Background(), &api.Bounce{Message: "foo"})
 	if err != nil {
-		fmt.Println("successfully shouted", 1)
+		fmt.Println("tic successfully shouted ", t.counter)
+		t.counter++
 		fmt.Println("got message: ", req.Message)
 	}
 	return nil
