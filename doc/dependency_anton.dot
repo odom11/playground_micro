@@ -1,0 +1,20 @@
+digraph dependency {
+    payment;
+    payment_service;
+    shipment;
+    shipping_service;
+    order;
+    stock;
+    customer;
+    catalog;
+
+    order -> shipment[label="reservierung: s,\n sonst a"];
+    order -> payment[label="s/a"];
+    order -> catalog[label="s"];
+    payment -> customer[label="s"];
+    payment ->payment_service[label="s/a"];
+    shipment -> customer[label="s"];
+    shipment -> stock[label="reservierung: s,\n sonst a"];
+    shipment -> shipping_service[label="a"];
+    stock -> catalog[label="a"];
+}
