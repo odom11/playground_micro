@@ -1,6 +1,6 @@
 package tic
 
-import "github.com/ob-vss-20ss/blatt2-headcover_of_eternal_torment/api"
+import "github.com/odom11/playground_micro"
 
 type Tic struct {
 	toc api.TocService;
